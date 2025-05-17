@@ -2,8 +2,10 @@ import { db } from "@/db";
 import { example } from "@/db/schema";
 import { revalidatePath } from "next/cache";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
-  const data = await db.query.example.findMany();
+  const data = await db.query.example.findMany({});
 
   async function createHelloWorld() {
     "use server";
