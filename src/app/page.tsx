@@ -1,7 +1,7 @@
 import { db } from "@/db";
 import { example } from "@/db/schema";
 
-const createHelloWorld = () => {
+const createHelloWorld = async () => {
   "use server";
 
   db.insert(example).values({ text: "Hello World" });
