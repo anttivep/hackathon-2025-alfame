@@ -8,7 +8,7 @@ const createHelloWorld = async () => {
 };
 
 export default async function Home() {
-  const data = db.query.example.findMany();
+  const data = await db.query.example.findMany();
   return (
     <div>
       Hello World
